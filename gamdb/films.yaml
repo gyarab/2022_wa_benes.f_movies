@@ -1,0 +1,7 @@
+- model: films.movie
+  pk: 1
+  fields:
+    name: Kámen a nůžky
+    year: 2023
+    description: Je to o napínavé drama.
+  
