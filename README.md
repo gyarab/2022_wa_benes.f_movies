@@ -5,6 +5,7 @@
 
 * ```console
 python3 manage.py runserver
+```
 
 * Second item
 * Third item
