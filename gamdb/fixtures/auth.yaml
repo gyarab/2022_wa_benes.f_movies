@@ -1,0 +1,15 @@
+- model: auth.user
+  pk: 2
+  fields:
+      password: pbkdf2_sha256$390000$hNk9dyA3djS2JN9MSCHW4Y$rViExTyjQamLeHXvWu4rlNoB2La6Kn4e05bky3ILoPQ=
+      last_login: 2023-03-21 09:11:29.685599+00:00
+      is_superuser: true
+      username: admin
+      first_name: ""
+      last_name: ""
+      email: filip.benes@student.gyarab.cz
+      is_staff: true
+      is_active: true
+      date_joined: 2023-03-21 09:08:13.380151+00:00
+      groups: []
+      user_permissions: []
