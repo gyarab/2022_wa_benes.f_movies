@@ -34,7 +34,7 @@ class Comment(models.Model):
 
 class Director(models.Model):
     name = models.CharField(max_length=255)
-    slug = models.SlugField()
+    slug = models.SlugField(default="")
     birth_year = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
@@ -44,7 +44,7 @@ class Director(models.Model):
 class Actor(models.Model):
     name = models.CharField(max_length=255)
     birth_year = models.IntegerField(blank=True, null=True)
-    slug = models.SlugField()
+    slug = models.SlugField(default="")
     photo_url = models.CharField(max_length=255, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
 
