@@ -3,18 +3,21 @@ from .models import Movie, Director, Actor, Genre, Comment
 from django.db.models import Q
 from .forms import CommentForm
 
+
 def directors(request):
     context = {
         'directors': Director.objects.all()
     }
-    print(context)
+    # print(context)
     return render(request, 'directors.html', context)
+
 
 def director(request, id):
     context = {
         "director": Director.objects.get(id=id)
     }
     return render(request, 'director.html', context)
+
 
 def movies(request):
     movies_queryset = Movie.objects.all()
@@ -23,7 +26,8 @@ def movies(request):
         movies_queryset = movies_queryset.filter(genres__name=genre)
     search = request.GET.get('search')
     if search:
-        movies_queryset = movies_queryset.filter(Q(name__icontains=search)|Q(description__icontains=search)) 
+        movies_queryset = movies_queryset.filter(
+            Q(name__icontains=search) | Q(description__icontains=search))
 
     context = {
         "movies": movies_queryset,
@@ -32,6 +36,7 @@ def movies(request):
         "search": search,
     }
     return render(request, 'movies.html', context)
+
 
 def movie(request, id):
     m = Movie.objects.get(id=id)
@@ -60,17 +65,20 @@ def movie(request, id):
     }
     return render(request, 'movie.html', context)
 
+
 def actors(request):
     context = {
         "actors": Actor.objects.all()
     }
     return render(request, 'actors.html', context)
 
+
 def actor(request, id):
     context = {
         "actor": Actor.objects.get(id=id)
     }
     return render(request, 'actor.html', context)
+
 
 def homepage(request):
     context = {
@@ -81,4 +89,3 @@ def homepage(request):
         "genres": Genre.objects.all(),
     }
     return render(request, 'homepage.html', context)
-  

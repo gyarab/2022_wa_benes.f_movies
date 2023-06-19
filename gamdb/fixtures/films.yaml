@@ -1,60 +1,134 @@
 - model: films.movie
-  pk: 1
+  pk: 11
   fields:
-      name: Konec světa
-      year: 2012
-      description: aaaaaa
+    name: Přelet nad kukaččím hnízdem
+    slug: preletNadKukaccimHnizdem
+    image_url: data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUFBgUFRUYGRgYGhgdHBsbGhgaHRsbIR0aGhsaGhodIS0kHSEqIxoaJTclKi4zNDQ0GyM6PzozPi0zNDEBCwsLEA8PGBISGDEhGCEzMzMxMzEzMTQxMzMzMzExMTExMz4zMTMxMTMxMzEzNzMzMzE+MzEzMTMzMzM+MTMzMf/AABEIAQsAvQMBIgACEQEDEQH/
+    year: 1975
+    avg_rating: 9.0
+    description: Přelet nad kukaččím hnízdem je americký film z roku 1975 režiséra
+      Miloše Formana natočený podle stejnojmenné divadelní hry, která vycházela z
+      románové předlohy spisovatele Kena Keseyho Vyhoďme ho z kola ven v hlavní roli
+      s Jackem Nicholsonem.
+    director: 3
+    genres:
+    - 3
+    actors:
+    - 4
 - model: films.movie
-  pk: 2
+  pk: 12
   fields:
-      name: Kostel
-      year: 1999
-      description: ccccccccc
+    name: Pelíšky
+    slug: pelisky
+    image_url: https://image.pmgstatic.com/cache/resized/w420/files/images/film/posters/165/059/165059101_56d52a.jpg
+    year: 1999
+    avg_rating: 9.0
+    description: 'Pelíšky jsou česká filmová komedie režiséra Jana Hřebejka z roku
+      1999, dějově zasazená do Prahy na konci 60. let 20. století. Film získal celkem
+      tři České lvy: za nejlepší hlavní mužský herecký výkon, za filmový plakát a
+      za divácky nejúspěšnější český film.'
+    director: 4
+    genres:
+    - 1
+    - 3
+    actors:
+    - 2
+    - 3
 - model: films.movie
+  pk: 13
+  fields:
+    name: Vratné lahve
+    slug: ratneLahve
+    image_url: data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJAAZQMBIgACEQEDEQH/
+    year: 2007
+    avg_rating: 7.0
+    description: Vratné lahve jsou český film režiséra Jana Svěráka, natočený v roce
+      2007 podle scénáře Zdeňka Svěráka. V tomtéž roce byl film oceněn 3 Českými lvy.
+    director: 5
+    genres:
+    - 1
+    actors:
+    - 1
+- model: films.director
   pk: 3
   fields:
-      name: Strom
-      year: 2003
-      description: wwwwwwwwww
-- model: films.movie
+    name: MilosForman
+    slug: milosForman
+    birth_year: 1932
+- model: films.director
   pk: 4
   fields:
-      name: Tabule
-      year: 2000
-      description: dddddddddd
-- model: films.movie
+    name: Jan Hřebejk
+    slug: janHrebejk
+    birth_year: 1967
+- model: films.director
   pk: 5
   fields:
-      name: Kup toho víc
-      year: 2020
-      description: rrrrrrrrr
-- model: films.movie
-  pk: 6
+    name: Jan Svěrák
+    slug: janSverak
+    birth_year: 1965
+- model: films.actor
+  pk: 1
   fields:
-      name: Židle a stůl
-      year: 1980
-      description: uuuuuuuuuuuuuuuu
-- model: films.movie
-  pk: 7
+    name: Zdeněk Svěrák
+    birth_year: 1936
+    slug: zdenekSverak
+    photo_url: data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJAA0QMBIgACEQEDEQH/
+    description: Zdeněk Svěrák je český dramatik, scenárista, herec, autor písňových
+      textů a spisovatel. Po studiu na gymnáziu a Vysoké škole pedagogické, kterou
+      dokončil roku 1958, odešel společně se svou budoucí manželkou učit do severozápadních
+      Čech, nejprve do Měcholup a poté do Žatce.
+- model: films.actor
+  pk: 2
   fields:
-      name: Vidlička
-      year: 2021
-      description: eeeeeeeeeeeeeeee
-- model: films.movie
-  pk: 8
+    name: Miroslav Donutil
+    birth_year: 1951
+    slug: miroslavDonutil
+    photo_url: data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJAAVQMBIgACEQEDEQH/
+    description: Miroslav Donutil je český herec, moderátor, bavič a zpěvák. Je bývalým
+      členem činohry Národního divadla v Praze. V roce 2021 obdržel čestné občanství
+      města Třebíče.
+- model: films.actor
+  pk: 3
   fields:
-      name: Seno
-      year: 2010
-      description: tttttttttttttttt
-- model: films.movie
-  pk: 9
+    name: Bolek Polívka
+    birth_year: 1949
+    slug: bolekPolivka
+    photo_url: https://media.super.cz/images/top_foto1/0000032215990900/REj8LA99OWCrkcpm1IHqPQ/5d402a4b3af25dd88f950800-283292.jpg?20190730133021&size=539
+    description: Boleslav Polívka je český herec, mim, dramatik a scenárista. Vystudoval
+      brněnskou JAMU a od roku 1972 působil v divadle Husa na provázku. V roce 1993
+      si v Brně založil vlastní Divadlo Bolka Polívky. Ztvárnil řadu divadelních,
+      filmových a televizních rolí.
+- model: films.actor
+  pk: 4
   fields:
-      name: Sundej si ty boty!
-      year: 1998
-      description: qqqqqqqqqqqqqqq
-- model: films.movie
-  pk: 10
+    name: Jack Nicholson
+    birth_year: 1937
+    slug: jackNicholson
+    photo_url: https://image.pmgstatic.com/cache/resized/w200h264crop/files/images/creator/photos/163/996/163996807_4192d3.jpg
+    description: O Jackovi, jednej z najväčších a najlegendárnejších filmových hviezd
+      súčasnosti sa toho príliš veľa nevie. Rozhovory pre novinárov poskytuje iba
+      veľmi zriedka a zásadne v nich nerozoberá svoje súkromie alebo detstvo. Je to
+      starý mládenec, ktorý si vie užívať života a ktorý vie zo svojho silného postavenia
+      (a tučného bankového účtu) vyťažiť maximum. Hoci bol šesť rokov ženatý s herečkou
+      Sandrou Knightovou a sedem rokov mu bola partnerkou Anjelica Huston, jeho…
+- model: films.genre
+  pk: 1
   fields:
-      name: Voda a sůl
-      year: 2017
-      description: yyyyyyyyyyyyyy
+    name: Komedie
+- model: films.genre
+  pk: 2
+  fields:
+    name: Horor
+- model: films.genre
+  pk: 3
+  fields:
+    name: Drama
+- model: films.genre
+  pk: 4
+  fields:
+    name: Akční
+- model: films.genre
+  pk: 5
+  fields:
+    name: Romantické
