@@ -6,7 +6,7 @@ class CommentForm(forms.Form):
     author = forms.CharField(
         required=False,
         widget=forms.TextInput(
-            attrs={"class": "form-control", "placeholder": "Pepa z Depa"})
+            attrs={"class": "form-control", "placeholder": "Jméno"})
     )
     text = forms.CharField(
         required=False,
