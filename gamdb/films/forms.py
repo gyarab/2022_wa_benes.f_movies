@@ -10,11 +10,11 @@ class CommentForm(forms.Form):
     )
     text = forms.CharField(
         required=False,
-        widget=forms.Textarea(attrs={"rows": 5, "class": "form-control"})
+        widget=forms.Textarea(attrs={"rows": 5, "class": "form-control", "placeholder" : "komentář..."})
     )
     rating = forms.IntegerField(
         required=False,
-        widget=forms.NumberInput(attrs={"class": "form-control"}),
+        widget=forms.NumberInput(attrs={"class": "form-control", "placeholder" : "X%"}),
         validators=[
             MaxValueValidator(100),
             MinValueValidator(1)
